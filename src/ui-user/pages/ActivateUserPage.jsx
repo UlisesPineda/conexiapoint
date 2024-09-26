@@ -24,7 +24,7 @@ export const ActivateUserPage = () => {
         <section className="main-activateuser-container">
             <div className="activateuser-block">
               <big> { isUserActivated ? 'Usuario activado exitosamente' : 'El enlace ha caducado' } </big>
-              <a href={`/`}>
+              <a href={`${ import.meta.env.BASE_URL }#/entrar`}>
                 <button className='activateuser-button'> { isUserActivated ? 'Iniciar sesión' : 'Ir al inicio' } </button>
               </a>
             </div>
