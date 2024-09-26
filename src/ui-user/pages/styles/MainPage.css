@@ -1,0 +1,217 @@
+.main-section,
+.description-section,
+.call-action-section {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-section {
+    height: 100vh;
+}
+.call-action-section {
+    height: 60vh;
+}
+.main-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--maingradient-left);
+    animation: revealComponent .3s ease-in-out;
+}
+.main-block {
+    height: 70vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+.main-block h1,
+.main-block h2,
+.main-block p {
+    width: 100%;
+}
+.main-block h1 {
+    font-size: 44px;
+}
+.main-block h2 {
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.main-block p {
+    line-height: 1;
+}
+.ilustration-block {
+    position: relative;
+}
+.ilustration-block img {
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.floating-ilustration {
+    animation: floating 7s ease-in-out infinite;
+}
+.light-ilustration {
+    animation: floating 7s ease-in-out infinite, lighting 3s ease-in-out infinite;
+}
+@keyframes floating {
+    50% {
+        transform: translateY(17px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes lighting {
+    10% {
+        opacity: 0;
+    }
+    30% {
+        opacity: .85;
+    }
+    55% {
+        opacity: 0;
+    }
+    70% {
+        opacity: .85;
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: .85;
+    }
+}
+.description-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: var(--downup-gradient);
+}
+.main-block-container-one,
+.main-block-container-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+.main-block-container-one {
+    flex-direction: row-reverse;
+}
+.description-ilustration img{
+    height: 60%;
+    margin-top: 20%;
+}
+.call-action-section {
+    background-image: var(--green-gradient)
+}
+.call-action-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.call-action-button {
+    padding: 7px 30px;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: var(--shadow-on-text);
+    box-shadow: var(--shadow-on-box);
+    border-radius: var(--border-radius-box);
+    background-color: var(--hover-green);
+}
+
+@media ( max-width: 480px ) {
+    .main-section,
+    .description-section,
+    .call-action-section {
+        flex-direction: column;
+    }
+    .main-block {
+        height: 35vh;
+        width: 90%;
+    }
+    .main-block h1 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .main-block h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+    .main-block p {
+        font-size: 12px;
+        text-align: center;
+    }
+    .main-section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: radial-gradient(circle 45vh at 29vh 70vh,#9803be,#8b05b5,#7f06ab,#7307a2,#670798);
+    }
+    .main-block-container-one,
+    .main-block-container-two {
+        flex-direction: column;
+    }
+    .main-block-container-one .main-block:nth-child(2),
+    .main-block-container-two .main-block:nth-child(2) {
+        height: 25vh;        
+    }
+    .description-ilustration img{
+        height: 100%;
+        margin-top: 0;
+    }    
+    .description-section {
+        padding: 30px 0;
+    }
+    .call-action-section {
+        height: 40vh;
+    }
+    .call-action-container {
+        width: 90%;
+    }
+    .call-action-section h2 {
+        font-size: 14px;
+    }
+    .call-action-section p,
+    .call-action-button {
+        font-size: 12px;
+    }
+}
+@media ( min-width: 481px ) and ( max-width: 1024px ) {
+    .main-block {
+        height: 50vh;
+    }
+    .ilustration-block img {
+        width: 90%;
+    }
+    .main-block h1 {
+        font-size: 20px;
+    }
+    .main-block h2 {
+        font-size: 16px;
+    }
+    .main-block p {
+        font-size: 12px;
+    }
+    .call-action-section {
+        height: 32vh;
+    }
+    .call-action-section h2 {
+        font-size: 16px;
+    }
+    .call-action-section p,
+    .call-action-button {
+        font-size: 12px;
+    }
+
+}
