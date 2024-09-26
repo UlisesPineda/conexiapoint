@@ -38,7 +38,7 @@ export const ChangePasswordPage = () => {
                 isPasswordUpdated ? 
                         <div className='changepass-block-container'>
                             <big>¡El password fue actualizado exitosamente!</big>
-                            <Link to="/entrar">
+                            <Link to={`${ import.meta.env.BASE_URL }#/entrar`}>
                                 <button className='changepassword-button'>Iniciar Sesión</button>
                             </Link>
                         </div>
