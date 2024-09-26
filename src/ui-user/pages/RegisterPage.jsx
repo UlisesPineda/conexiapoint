@@ -48,7 +48,7 @@ export const RegisterPage = () => {
           <div className="register-data-container">
             <h2>Crea tu cuenta y administra tus clientes y contactos.</h2>
             <div className="register-ilustration">
-              <img src="/img/register-ilustration.svg" alt="Ilustración de la sección de registro" />
+              <img src={`${ import.meta.env.BASE_URL }/img/register-ilustration.svg`} alt="Ilustración de la sección de registro" />
             </div>
           </div>
           <div className="register-form-container">

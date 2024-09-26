@@ -8,7 +8,7 @@ export const Navbar = () => {
           to='/' 
           className='logo-container'
         >
-          <img src="/img/logo-green.png" alt="Logo de Conexia Point" />
+          <img src={`${ import.meta.env.BASE_URL }/img/logo-green.png`} alt="Logo de Conexia Point" />
         </Link>
         <div className="links-container">
           <NavLink

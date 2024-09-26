@@ -18,7 +18,7 @@ export const LoginPage = () => {
           <div className="login-data-container">
           <h2>Comienza a administrar tus clientes y contactos.</h2>
             <div className="login-ilustration">
-              <img src="/img/login-ilustration.svg" alt="Ilustración de la sección de registro" />
+              <img src={`${ import.meta.env.BASE_URL }/img/login-ilustration.svg`} alt="Ilustración de la sección de registro" />
             </div>
           </div>
           <div className="login-form-container">

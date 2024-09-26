@@ -11,9 +11,9 @@ export const MainPage = () => {
               <p>Gestiona todas las interacciones con tus clientes de una manera práctica, ágil y eficaz.</p>
             </div>
             <div className="main-block ilustration-block">
-              <img src="/img/main-base-ilustration.svg" alt="Ilustración principal del sitio web" />
-              <img src="/img/main-float-ilustration.svg" alt="Ilustración principal del sitio web" className='floating-ilustration' />
-              <img src="/img/main-light-ilustration.svg" alt="Ilustración principal del sitio web" className='light-ilustration'/>
+              <img src={`${ import.meta.env.BASE_URL }/img/main-base-ilustration.svg`} alt="Ilustración principal del sitio web" />
+              <img src={`${ import.meta.env.BASE_URL }/img/main-float-ilustration.svg`} alt="Ilustración principal del sitio web" className='floating-ilustration' />
+              <img src={`${ import.meta.env.BASE_URL }/img/main-light-ilustration.svg`} alt="Ilustración principal del sitio web" className='light-ilustration'/>
             </div>
         </section>
         <section className="description-section">
@@ -24,7 +24,7 @@ export const MainPage = () => {
                 <p>Podrás administrar todos tus contactos tanto personales y de negocios de manera separada para una mejor organización y para objetivos diferentes.</p>
               </div>
               <div className="main-block ilustration-block description-ilustration">
-                <img src="/img/info-ilustration-one.svg" alt="Ilustración de la sección descriptiva" />
+                <img src={`${ import.meta.env.BASE_URL }/img/info-ilustration-one.svg`} alt="Ilustración de la sección descriptiva" />
               </div>
             </div>
             <div className="main-block-container-two">
@@ -34,7 +34,7 @@ export const MainPage = () => {
                 <p>Si necesitas alguna funcionalidad adicional, podrás hacer una solicitud para evaluar tu requerimiento y en caso de ser aprobado podrás contar con dicho apartado.</p>
               </div>
               <div className="main-block ilustration-block description-ilustration">
-                <img src="/img/info-ilustration-two.svg" alt="Ilustración de la sección descriptiva" />
+                <img src={`${ import.meta.env.BASE_URL }/img/info-ilustration-two.svg`} alt="Ilustración de la sección descriptiva" />
               </div>
             </div>
         </section>
