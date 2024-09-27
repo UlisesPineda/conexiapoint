@@ -44,8 +44,8 @@ export const ChangePasswordPage = () => {
             {
                 isPasswordUpdated ? 
                         <div className='changepass-block-container'>
-                            <big>¡El password fue actualizado exitosamente!</big>
-                            <a to={`${ import.meta.env.BASE_URL }#/entrar`}>
+                            <big>¡Comienza a administrar tus contactos comerciales!</big>
+                            <a href={`${ import.meta.env.BASE_URL }#/entrar`}>
                                 <button className='changepassword-button'>Iniciar Sesión</button>
                             </a>
                         </div>
