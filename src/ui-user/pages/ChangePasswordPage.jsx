@@ -6,7 +6,8 @@ import { useAuthUser, useForm, useValidateForm } from '../hooks';
 
 export const ChangePasswordPage = () => {
 
-    const isPasswordUpdated = false;
+    // const isPasswordUpdated = false;
+    const [isPasswordUpdated, setIsPasswordUpdated] = useState(false)
     const [isVisiblePassword, setIsVisiblePassword] = useState(false);
 
     const { token } = useParams();
@@ -21,13 +22,19 @@ export const ChangePasswordPage = () => {
         setIsVisiblePassword( !isVisiblePassword );
     };
 
+    const handlePasswordUpdated = () => {
+        enableButtonForm();
+        resetForm();
+        setIsPasswordUpdated(true);
+    };
+
     const handleChangePassword = async(e) => {
         e.preventDefault();
         validateEmptyInput( form, 'Aún no ingresas el nuevo password' ) &&
             validateChangePasswordForm( form ) &&
                 disableButtonForm() &&
                     await onResetPassword( form, token ) ?
-                        enableButtonForm() & resetForm() :
+                        handlePasswordUpdated() :
                             enableButtonForm();
     };
 
@@ -52,7 +59,7 @@ export const ChangePasswordPage = () => {
                                 <label htmlFor="changePassword">Nuevo password:</label>
                                 <div className="changepass-input-container">
                                     <input 
-                                        type="text" 
+                                        type={ isVisiblePassword ? 'text' : 'password' }
                                         name="changePassword"
                                         id="changePassword"
                                         value={ form.changePassword }
