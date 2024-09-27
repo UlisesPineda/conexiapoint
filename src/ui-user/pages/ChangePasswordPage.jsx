@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import './styles/ChangePasswordPage.css';
 import { useAuthUser, useForm, useValidateForm } from '../hooks';
@@ -45,9 +45,9 @@ export const ChangePasswordPage = () => {
                 isPasswordUpdated ? 
                         <div className='changepass-block-container'>
                             <big>¡El password fue actualizado exitosamente!</big>
-                            <Link to={`${ import.meta.env.BASE_URL }#/entrar`}>
+                            <a to={`${ import.meta.env.BASE_URL }#/entrar`}>
                                 <button className='changepassword-button'>Iniciar Sesión</button>
-                            </Link>
+                            </a>
                         </div>
                     :
                         <div className='changepass-block-container'>
